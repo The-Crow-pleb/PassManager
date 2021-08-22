@@ -1,0 +1,31 @@
+{
+  "name": "password-manager-bot",
+  "version": "0.0.1",
+  "description": "A bot that stores in a local, protected and trustworthy database that only the user has rights to modify and access through bot commands.",
+  "main": "src/bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/The-Crow-pleb/passmanager.git"
+  },
+  "keywords": [
+    "password",
+    "manager",
+    "discord",
+    "bot"
+  ],
+  "author": "тоска",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/The-Crow-pleb/passmanager/issues"
+  },
+  "homepage": "https://github.com/The-Crow-pleb/passmanager#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "discord.js": "^13.1.0",
+    "dotenv": "^10.0.0",
+    "mongoose": "^5.13.7"
+  }
+}
