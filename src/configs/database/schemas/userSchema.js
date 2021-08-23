@@ -12,8 +12,10 @@ const accountSchema = new mongoose.Schema({
 const UserSchema = new mongoose.Schema({
     userID: String,
     password: String,
+    backupPassword: String,
     language: String,
     prefix: String,
+    premium: Boolean,
     data: Array
 })
 

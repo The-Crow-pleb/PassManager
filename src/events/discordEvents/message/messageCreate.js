@@ -8,7 +8,7 @@ module.exports = async(client, message) => {
     if(message.channel.type === "DM" && !message.author.bot) {
         if(!userConfig) {
             PREFIX = process.env.PREFIX
-            return await userSchema.findOneAndUpdate({userID: message.author.id}, {userID: message.author.id, language: "english", prefix: process.env.PREFIX}, {upsert: true})
+            return await userSchema.findOneAndUpdate({userID: message.author.id}, {userID: message.author.id, language: "english", prefix: process.env.PREFIX, premium: false}, {upsert: true})
         } else {
             PREFIX = userConfig.prefix
         }
@@ -17,7 +17,7 @@ module.exports = async(client, message) => {
             .trim()
             .split(/\s+/);
         if(client.commands.get(cmdName)) {client.commands.get(cmdName)(client, message, cmdArgs)}
-        else return message.reply("Coudn't find this command, maybe retry?") 
+        // else return message.reply("Coudn't find this command, maybe retry?") 
     }
 
 }
